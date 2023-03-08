@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("./font/RedHatDisplay-VariableFont_wght.ttf");
+}
+/******************************** 
+        TABLE OF CONTENTS 
+---------------------------------
+
+1.DEFAULTS
+2.MAIN
+
+********************************/
+
+/******************************** 
+          1.DEFAULTS
+********************************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display";
+}
+
+:root {
+  /* COLORS */
+  /* PRIMARY COLORS */
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  /* SECONDARY COLORS */
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+
+  /* FONTS */
+  --paragraphFontSize: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--paleBlue) url("./images/pattern-background-desktop.svg")
+    no-repeat;
+  background-size: contain;
+  padding: 0 2rem;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background: var(--paleBlue) url("./images/pattern-background-mobile.svg")
+      no-repeat;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+/******************************** 
+             2.MAIN
+********************************/
+
+main {
+  width: 100%;
+  max-width: 450px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 30px 40px -10px rgba(118, 108, 241, 0.25);
+}
+
+main .imageWrapper img {
+  width: 100%;
+}
+
+main .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 3rem;
+  height: 100%;
+}
+
+main .textWrapper p {
+  color: var(--desaturatedBlue);
+  font-weight: 500;
+  padding: 1rem;
+  line-height: 1.6rem;
+}
+
+.textWrapper h1 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+.planContent {
+  display: flex;
+}
+
+.planContent p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan a {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--brightBlue);
+}
+
+.plan a:hover {
+  text-decoration: none;
+  color: hsl(245deg 83% 68%);
+}
+.planContent img {
+  margin-right: 1.2rem;
+}
+
+.planContent p {
+  font-weight: 900;
+}
+.planContent p span {
+  color: hsl(228deg 11% 56%);
+  font-weight: 500;
+}
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.buttonWrapper button {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.buttonWrapper button:first-child {
+  background-color: var(--brightBlue);
+  color: white;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
+.buttonWrapper button:first-child:hover {
+  background-color: hsl(245deg 83% 68%);
+  box-shadow: 0px 20px 30px -5px rgba(118, 108, 241, 0.4);
+}
+.buttonWrapper button:last-child {
+  font-size: 15px;
+  color: var(--desaturatedBlue);
+}
+
+.buttonWrapper button:last-child:hover {
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+
+@media only screen and (max-width: 500px) {
+  div.contentWrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  main {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  div.contentWrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .textWrapper p,
+  .plan {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
